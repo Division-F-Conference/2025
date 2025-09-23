@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=50201&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Division F Conference 2025</title>
@@ -10,17 +10,29 @@
 </head>
 <body>
   <header>
-    <nav>
-        <a href="/2025/" class="site-title">Division F Conference 2025</a>
-        <ul>
-            
-            <li><a href="/programme/" id="Programme">Programme</a></li>
-            
-            <li><a href="/registration/" id="Registration">Registration</a></li>
-            
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <a href="/2025/" class="site-title">Division F Conference 2025</a>
+    
+    
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    
+    <ul class="nav-links">
+      
+        <li><a href="/programme/" id="Programme">Programme</a></li>
+      
+        <li><a href="/registration/" id="Registration">Registration</a></li>
+      
+    </ul>
+  </nav>
 </header>
+<script>
+const toggleButton = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+toggleButton.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+</script>
   <main>
     
     <table class="timetable">

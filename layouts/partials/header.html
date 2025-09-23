@@ -1,10 +1,22 @@
 <header>
-    <nav>
-        <a href="/2025/" class="site-title">{{ .Site.Title }}</a>
-        <ul>
-            {{ range .Site.Menus.main }}
-            <li><a href="{{ .URL }}" id="{{ .Name }}">{{ .Name }}</a></li>
-            {{ end }}
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <a href="/2025/" class="site-title">{{ .Site.Title }}</a>
+    
+    <!-- Hamburger menu for mobile -->
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    
+    <ul class="nav-links">
+      {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}" id="{{ .Name }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
 </header>
+<script>
+const toggleButton = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+toggleButton.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+</script>
