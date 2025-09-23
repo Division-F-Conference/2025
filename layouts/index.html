@@ -10,11 +10,22 @@
 </head>
 <body>
     {{ partial "header.html" . }}
+    <div class="container">
         <main>
             <h1 style="margin-bottom: 0px;">Division F Conference <span class="highlighted">2025</span></h1>
             <h2 style="max-width: 500px; margin-top: -10px;">An exhibition of current research in Information Engineering at Cambridge</h2>
             <p style="max-width: 500px;">{{ .Content }}</p>
         </main>
+
+        <aside class="sidebar">
+            <h3>Committee Members</h3>
+            <ul>
+                {{ range .Params.members }}
+                    <li>{{ .name }}, <strong>{{ .group }}</strong></li>
+                {{ end }}
+            </ul>
+        </aside>
+    </div>
     {{ partial "front_footer.html" . }}
 </body>
 </html>

@@ -1,3 +1,18 @@
+---
+draft: false
+members:
+  - name: "Xinyi Yi"
+    group: "Control"
+  - name: "Varun Jain"
+    group: "CBL"
+  - name: "Chexuan Qiao"
+    group: "MIL"
+  - name: "Felix O'Mahony"
+    group: "MIL"
+  - name: "Joe Bacchus George"
+    group: "PSI²"
+---
+
 The conference will be held in person at the *Cambridge Engineering Department, on Trumpington Street Site, CB2 1PZ* on **Tuesday 7ᵗʰ October** from **10:30 to 17:00**.
 
 Research will be presented by four groups within the Information Engineering division:
