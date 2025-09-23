@@ -104,6 +104,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 3em;
+    line-height: 1.2;
+    margin-bottom: 1.2rem !important;
 }
 
 p {
@@ -136,6 +138,7 @@ footer {
 }
 
 .menu-toggle {
+  color: var(--dark_color);
   display: none;
   font-size: 1.5rem;
   background: none;
