@@ -1,4 +1,4 @@
-The conference will be held in person at the *Cambridge Engineering Department, on Trumpington Street Site, CB2 1PZ* on **Tuesday 27ᵗʰ October** from **10:30 to 17:00**.
+The conference will be held in person at the *Cambridge Engineering Department, on Trumpington Street Site, CB2 1PZ* on **Tuesday 7ᵗʰ October** from **10:30 to 17:00**.
 
 Research will be presented by four groups within the Information Engineering division:
 
