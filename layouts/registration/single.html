@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="../css/single.css">
+</head>
+<body>
+  {{ partial "header.html" . }}
+<main>
+  <form class="contact-form" action="https://script.google.com/macros/s/AKfycbxp55RTvt9dl8AMZjukAR-68BSjD-XHKV_BjOrTokguuQBu-kttMVSWnxnZUnVKLZ7f/exec">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="Name" required placeholder="Full name">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="Email" required placeholder="crsid@cam.ac.uk">
+
+    <label for="role">Group</label>
+    <select id="role" name="Group" required>
+      <option value="" disabled selected>Academic Group</option>
+      <option value="control">Control</option>
+      <option value="cbl">Computational and Biological Learning (CBL)</option>
+      <option value="mil">Machine Intelligence (MIL)</option>
+      <option value="psi2">Probabilistic Systems, Information and Inference (PSI²)</option>
+      <option value="other">External</option>
+    </select>
+
+    <label for="message">Dietary requirements</label>
+    <textarea id="message" name="Diet" required placeholder="Your message"></textarea>
+
+    <label class="checkbox">
+      <input type="checkbox" id="presenter" name="Poster">
+      <span class="checkmark"></span>
+        I will be presenting a poster
+    </label>
+
+    <div id="poster-field" style="display: none;">
+      <label for="poster-name">Poster title</label>
+      <textarea id="poster-name" name="Title" placeholder="Your poster title"></textarea>
+    </div>
+
+    <label class="checkbox">
+      <input type="checkbox" id="speaker" name="Talk">
+      <span class="checkmark"></span>
+        I would like to give a talk
+    </label>
+
+    <button type="submit" style="margin-top: 20px;">Register</button>
+  </form>
+  <script>
+  const presenterCheckbox = document.getElementById('presenter');
+  const posterField = document.getElementById('poster-field');
+
+  presenterCheckbox.addEventListener('change', () => {
+    if (presenterCheckbox.checked) {
+      posterField.style.display = 'block';
+    } else {
+      posterField.style.display = 'none';
+    }
+  });
+</script>
+</main>
+  {{ partial "footer.html" . }}
+</body>
+</html>

@@ -1,0 +1,25 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Division F Conference 2025'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[menu]
+  [[menu.main]]
+    name = "Programme"
+    url = "/programme/"
+    weight = 10
+  # [[menu.main]]
+  #   name = "Speakers"
+  #   url = "/speakers/"
+  #   weight = 20
+  # [[menu.main]]
+  #   name = "Posters"
+  #   url = "/posters/"
+  #   weight = 30
+  [[menu.main]]
+    name = "Registration"
+    url = "/registration/"
+    weight = 40
