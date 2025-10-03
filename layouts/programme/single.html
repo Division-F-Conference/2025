@@ -23,9 +23,22 @@
       <tbody>
         {{ range .Params.timetable }}
         <tr>
-          <td>{{ .time }}</td>
-          <td>{{ .activity }}</td>
-          <td>{{ .location }}</td>
+          <td style="text-align: right">{{ .time }}</td>
+          <td>
+            {{ $group := .group }}
+            {{ if eq $group ""}}
+            <div class="special-activity">
+            <em>{{ .activity }}</em>
+            <div style="font-size: 12px">{{ .group }}</div>
+            </div>
+            {{ else }}
+            <div>
+            <strong>{{ .activity }}</strong>
+            <div style="font-size: 12px">{{ .group }}</div>
+            </div>
+            {{ end }}
+          </td>
+          <td style="text-align: center">{{ .location }}</td>
         </tr>
         {{ end }}
       </tbody>

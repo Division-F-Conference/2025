@@ -8,6 +8,8 @@
   </url><url>
     <loc>http://localhost:1313/programme/</loc>
   </url><url>
+    <loc>http://localhost:1313/speakers/</loc>
+  </url><url>
     <loc>http://localhost:1313/registration/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>

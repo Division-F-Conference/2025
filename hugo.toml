@@ -11,9 +11,10 @@ title = 'Division F Conference 2025'
     name = "Programme"
     url = "/programme/"
     weight = 10
-  # [[menu.main]]
-  #   name = "Speakers"
-  #   url = "/speakers/"
+  [[menu.main]]
+    name = "Speakers"
+    url = "/speakers/"
+    weight = 20
   #   weight = 20
   # [[menu.main]]
   #   name = "Posters"

@@ -25,6 +25,13 @@ body {
     color: var(--dark_color);
 }
 
+.chosen-thing{
+    align-items: center;
+    text-align: center;
+    max-width: fit-content;
+    border-top: 1px solid var(--dark_color);
+}
+
 /* #Registration:hover{
     color: var(--light_color);
 } */
@@ -108,40 +115,68 @@ footer {
     color: var(--light_color);
 }
 
-.speaker-box {
-    border-radius: 8px;     
-    padding: 16px;
-    margin-bottom: 16px;
-    background-color: var(--light_color);
+.timetable-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(1, auto); 
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-.speaker-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 8px;
+.timetable-grid .speaker-card {
+  background-color: var(--alt_main);
+  border: 1px solid var(--neon);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative; 
 }
 
-.speaker-name {
-    font-weight: bold;
-    font-size: 1.2em;
+.timetable-grid .speaker-card .speaker-time-location {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--dark_color);
+  line-height: 1.2em;
 }
 
-.speaker-time {
-    font-size: 1.0em;
-    /* font-family: monospace; */
-    color: var(--dark_color);
+.timetable-grid .speaker-card .speaker-content {
+  margin-top: 2rem;
 }
 
-.speaker-group {
-    font-size: 1.1em;
-    color: var(--dark_color);
+.timetable-grid .speaker-card h3 {
+  line-height: 1.4em;
+  max-width: 16em;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
 }
 
-.speaker-description {
-    margin: 0;
-    font-size: 1em;
-    line-height: 1.4;
+.timetable-grid .speaker-card p {
+  line-height: 1.4em;
+  margin: 0.25rem 0;
+  color: var(--dark_color);
+  font-size: 1rem;
+}
+
+.timetable-grid .speaker-card .speaker-details {
+    text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--dark_color);
+}
+
+/* Optional: responsive */
+@media (max-width: 768px) {
+  .timetable-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 .contact-form {
@@ -200,13 +235,13 @@ footer {
 
 .timetable {
     max-width: 800px;      
-    margin: 20px auto; 
-    padding: 12px;  
-    border-radius: 8px;
+    margin: -50px auto; 
+    padding: 0px 10px;  
+    border-radius: 4px;
     background-color: var(--light_color);
     border-collapse: separate; 
     border-spacing: 0;    
-    border: 0px solid var(--background);
+    border: px solid var(--background);
 }
 
 .timetable th,
@@ -333,6 +368,7 @@ footer {
   border: none;
   cursor: pointer;
 }
+
 
 @media (max-width: 768px) {
   .nav-links {
