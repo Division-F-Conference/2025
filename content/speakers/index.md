@@ -41,7 +41,7 @@ timetable:
     description: ""
   - time: "14:00 - 14:25"
     activity: "Ms. Yi Zhang"
-    group: "Control, CDT in Agro-Food Robotics"
+    group: "Control, CDT in Agri-Food Robotics"
     location: "LT1"
     title: "Virtual Model Control for Robot Manipulation"
     description: ""
