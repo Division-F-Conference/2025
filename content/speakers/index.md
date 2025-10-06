@@ -22,7 +22,7 @@ timetable:
     title: "Using robots as proxies to understand human design"
     description: "Robots are more than tools; they can mirror human design. By embedding principles of movement, perception, and interaction into machines, we externalise and test our own assumptions about intelligence, embodiment, and adaptation. This talk will explore how robots can serve as proxies to study how humans are designed—revealing both the constraints and the creative possibilities that shape us. Drawing on examples from soft robotics, embodied intelligence, and human–robot interaction, I will show how robotic systems expose hidden aspects of our own biology and behaviour, from sensorimotor coordination to social communication. By treating robots as experimental models, much like biologists use organisms, we generate new insights into the dynamics of human design."
   - time: "12:00 - 12:25"
-    activity: "Prof. Yashar Ahmadian"
+    activity: "Dr. Yashar Ahmadian"
     group: "CBL"
     location: "LT1"
     title: "Efficient coding explains homeostatic adaptation in the brain"
