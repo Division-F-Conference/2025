@@ -16,7 +16,7 @@ timetable:
     group: "MIL, Civil Engineering"
     location: "LT1"
   - time: "12:00 - 12:25"
-    activity: "Dr. Yashar Ahmadian"
+    activity: "Prof. Yashar Ahmadian"
     group: "CBL"
     location: "LT1"
   - time: "12:30 - 12:55"
