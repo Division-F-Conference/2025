@@ -46,7 +46,7 @@ timetable:
     title: "Virtual Model Control for Robot Manipulation"
     description: ""
   - time: "14:30 - 14:55"
-    activity: "Prof. José Hernández-Lobato"
+    activity: "Prof. José Miguel Hernández-Lobato"
     group: "CBL"
     location: "LT1"
     title: "FEAT: Free energy Estimators with Adaptive Transport"
