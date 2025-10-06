@@ -10,7 +10,7 @@ timetable:
     title: ""
     description: ""
   - time: "11:00 - 11:25"
-    activity: "Prof. Jossy Sayir"
+    activity: "Dr. Jossy Sayir"
     group: "PSI²"
     location: "LT1"
     title: "Shannon’s Coding Theorem for a Simple Channel"
