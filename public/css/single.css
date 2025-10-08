@@ -1,48 +1,84 @@
+/* ==========================
+   Root Variables
+========================== */
 :root {
-    --neon: #e4a781;
-    --main: #eae4e1;
-    --alt_main: #efded4;
-    --background: #131313;
-    --light_color: #ffffff;
-    --dark_color: #131313;
+  --neon: #e4a781;
+  --main: #fffefd;
+  --alt_main: #efded4;
+  --background: #131313;
+  --light_color: #ffffff;
+  --dark_color: #131313;
+--grey_color: #faece6;
+    --edge: #f3f0ee;
+    --card:#f7f6f4;
+
 }
 
+/* ==========================
+   Fonts
+========================== */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("PlusJakartaSans-Regular.woff2") format("woff2"),
+       url("PlusJakartaSans-Regular.woff") format("woff"),
+       url("PlusJakartaSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("PlusJakartaSans-Bold.woff2") format("woff2"),
+       url("PlusJakartaSans-Bold.woff") format("woff"),
+       url("PlusJakartaSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ==========================
+   Global Styles
+========================== */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0; padding: 0;
-    background-color: var(--main);
-    color: var(--dark_color);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  font-family: "Plus Jakarta Sans", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main);
+  color: var(--dark_color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-#Registration{
-    border-radius: 12px;
-    padding: 6px 12px;
-    background-color: var(--neon);
-    font-weight: 600;
-    color: var(--dark_color);
+li,
+p {
+  font-size: 1.2em;
 }
 
-.chosen-thing{
-    align-items: center;
-    text-align: center;
-    max-width: fit-content;
-    border-top: 1px solid var(--dark_color);
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark_color);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
 
-/* #Registration:hover{
-    color: var(--light_color);
-} */
+h1 {
+  font-size: 3em;
+}
 
+/* ==========================
+   Header & Navigation
+========================== */
 header {
-    background-color: var(--background);
-    color: var(--light_color);
+    z-index: 100; 
+    background-color: transparent;
+    color: var(--dark_color);
     padding: 1em 0;
+    border-bottom: 1px solid var(--edge); 
+    padding-bottom: 16px;
+    margin-bottom: 20px; 
 }
 
 header nav {
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +91,7 @@ header nav a.site-title {
     color: var(--color);
     text-decoration: none;
     font-size: 1.4em;
-    font-weight: 500;
+    font-weight: 1000;
 }
 
 header nav ul {
@@ -67,7 +103,7 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: var(--color);
+    color: var(--dark_color);
     text-decoration: none;
     font-weight: 500;
     padding: 0.5em 0;
@@ -75,274 +111,12 @@ header nav ul li a {
 }
 
 /* header nav ul li a:hover {
-    color: var(--neon);
+  color: var(--neon);
 } */
 
-main {
-    max-width: 800px;
-    margin: 2em auto;
-    padding: 2em;
-    border-radius: 0;
-    background-color: var(--main);
-    flex-grow: 1;
-    line-height: 1.6;
-}
-
-li {
-    font-size: 1.2em;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-    color: var(--dark_color);
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-}
-
-h1 {
-    font-size: 3em;
-}
-
-p {
-    font-size: 1.2em;
-}
-
-
-footer {
-    text-align: center;
-    padding: 0.5em 0;
-    background-color: var(--background);
-    color: var(--light_color);
-}
-
-.timetable-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: repeat(1, auto); 
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-.timetable-grid .speaker-card {
-  background-color: var(--alt_main);
-  border: 1px solid var(--neon);
-  border-radius: 16px;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative; 
-}
-
-.timetable-grid .speaker-card .speaker-time-location {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  text-align: right;
-  font-size: 0.85rem;
-  color: var(--dark_color);
-  line-height: 1.2em;
-}
-
-.timetable-grid .speaker-card .speaker-content {
-  margin-top: 2rem;
-}
-
-.timetable-grid .speaker-card h3 {
-  line-height: 1.4em;
-  max-width: 16em;
-  margin: 0 0 0.5rem 0;
-  font-size: 1.4rem;
-}
-
-.timetable-grid .speaker-card p {
-  line-height: 1.4em;
-  margin: 0.25rem 0;
-  color: var(--dark_color);
-  font-size: 1rem;
-}
-
-.timetable-grid .speaker-card .speaker-details {
-    text-align: center;
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  color: var(--dark_color);
-}
-
-/* Optional: responsive */
-@media (max-width: 768px) {
-  .timetable-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-}
-
-.contact-form {
-    max-width: 800px;      
-    margin: 12px auto; 
-    padding: 24px;  
-    border-radius: 8px;
-    background-color: var(--light_color);
-    display: flex;
-    flex-direction: column;
-    gap: 16px;            
-}
-
-.contact-form label {
-    font-weight: bold;
-    margin-bottom: -8px;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.contact-form textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.contact-form button {
-    padding: 12px;
-    font-size: 1em;
-    background-color: #131313;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #333;
-}
-.contact-form select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-    width: 100%;
-    background-color: white;
-}
-
-.timetable {
-    max-width: 800px;      
-    margin: -50px auto; 
-    padding: 0px 10px;  
-    border-radius: 4px;
-    background-color: var(--light_color);
-    border-collapse: separate; 
-    border-spacing: 0;    
-    border: px solid var(--background);
-}
-
-.timetable th,
-.timetable td {
-    padding: 12px;
-    text-align: left;
-}
-
-.timetable th {
-    border-bottom: 2px solid var(--background);
-}
-
-.timetable tr:first-child th:first-child {
-    border-top-left-radius: 8px;
-}
-.timetable tr:first-child th:last-child {
-    border-top-right-radius: 8px;
-}
-.timetable tr:last-child td:first-child {
-    border-bottom-left-radius: 8px;
-}
-.timetable tr:last-child td:last-child {
-    border-bottom-right-radius: 8px;
-}
-
-.checkbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 0.9em;
-    position: relative;
-    user-select: none;
-    gap: 6px;
-    margin: 10px 0;  
-}
-
-.checkbox input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.checkbox .checkmark {
-    width: 16px;    
-    height: 16px;
-    background-color: var(--light_color);
-    border: 2px solid var(--background);
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    display: inline-block;
-    position: relative;
-}
-
-.checkbox input:checked + .checkmark::after {
-    content: "";
-    position: absolute;
-    left: 4px;
-    top: 0px;
-    width: 5px;
-    height: 10px;
-    border: solid var(--background);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
-
-.checkbox:hover .checkmark {
-    background-color: var(--light_color);
-}
-
-.poster-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px; 
-}
-
-.poster-box {
-    padding: 16px;
-    border-radius: 8px;
-    background: var(--light_color);
-}
-
-.poster-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.poster-name {
-    font-weight: bold;
-}
-
-.poster-time {
-    font-size: 0.9em;
-    color: #666;
-}
-
-.poster-description {
-    margin-top: 12px;
-}
-
+/* ==========================
+   Navbar (Responsive)
+========================== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -369,13 +143,11 @@ footer {
   cursor: pointer;
 }
 
-
 @media (max-width: 768px) {
   .nav-links {
-    color: var(--dark_color);
     display: none;
     flex-direction: column;
-    gap: 1.2rem; 
+    gap: 1.2rem;
     position: absolute;
     top: 60px;
     right: 0;
@@ -384,6 +156,7 @@ footer {
     background-color: var(--main);
     border-radius: 10px;
     padding: 1rem;
+    color: var(--dark_color);
   }
 
   .nav-links.show {
@@ -393,4 +166,329 @@ footer {
   .menu-toggle {
     display: block;
   }
+}
+
+/* ==========================
+   Buttons
+========================== */
+#Registration {
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: var(--grey_color);
+    font-weight: 600;
+    color: var(--neon);
+}
+
+.slides {
+    border-radius: 4px;
+    padding: 4px 8px;
+    background-color: var(--grey_color);
+    font-weight: 600;
+    color: var(--neon);
+}
+
+/* #Registration:hover {
+  color: var(--light_color);
+} */
+
+/* ==========================
+   Main Content
+========================== */
+main {
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: var(--main);
+  flex-grow: 1;
+  line-height: 1.6;
+}
+
+/* ==========================
+   Footer
+========================== */
+footer {
+    text-align: center;
+    padding: 0.5em 0;
+    background-color: var(--dark_color);
+    color: var(--light_color);
+    flex-shrink: 0; 
+}
+
+/* ==========================
+   Timetable Grid
+========================== */
+.timetable-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.speaker-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "title time"
+    "desc time";
+  gap: 0.25rem 1rem;
+  padding: 1.5rem 2rem;
+  background: var(--light_color);
+  border-radius: 0.2em;
+  border: 1px solid var(--edge);
+  align-items: start;
+}
+
+.speaker-content h3 {
+    max-width: 400px;
+  font-size: 1.4rem;
+  line-height: 1.2em;
+  padding-bottom: 10px;
+  margin: 0;
+  color: #111;
+}
+
+.speaker-content p {
+  margin: 0.8rem 0; 
+  line-height: 1.2;
+  color: #555;
+  font-size: 0.95rem; 
+}
+
+
+.speaker-time-location {
+    padding: 0px;
+  grid-area: time;
+  justify-self: end;
+  text-align: right;
+}
+
+.speaker-time-location p {
+  margin: 0.2rem 0;
+  color: #444;
+  font-size: 0.8rem;
+}
+
+.speaker-time-location p:first-child::before {
+  content: "Time: ";
+  font-weight: bold;
+}
+
+.speaker-time-location p:last-child::before {
+  content: "Location: ";
+  font-weight: bold;
+}
+
+/* Centered details (activity + group) spans full width */
+.speaker-details {
+  grid-area: details;
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+.speaker-details p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+
+}
+
+.speaker-details strong {
+  display: block;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .speaker-card {
+    grid-template-columns: 1fr;
+    padding: 0.75rem 1rem;
+  }
+
+  .speaker-time-location {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+
+  .speaker-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .speaker-content p,
+  .speaker-details p,
+  .speaker-time-location p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ==========================
+   Contact Form
+========================== */
+.contact-form {
+  border: 1px solid var(--edge);
+  max-width: 800px;
+  margin: 0px auto;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: var(--light_color);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: -8px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", Helvetica, Arial, sans-serif;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  padding: 12px;
+  font-size: 1em;
+  background-color: var(--dark_color);
+  color: var(--light_color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #333;
+}
+
+/* ==========================
+   Timetable Table
+========================== */
+.timetable {
+  max-width: 800px;
+  margin: -50px auto;
+  padding: 0 10px;
+  border-radius: 4px;
+  background-color: var(--light_color);
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--edge);
+}
+
+.timetable th,
+.timetable td {
+  padding: 12px;
+  text-align: left;
+}
+
+.timetable th {
+  border-bottom: 1px solid var(--edge);
+}
+
+.timetable tr:first-child th:first-child { border-top-left-radius: 8px; }
+.timetable tr:first-child th:last-child { border-top-right-radius: 8px; }
+.timetable tr:last-child td:first-child { border-bottom-left-radius: 8px; }
+.timetable tr:last-child td:last-child { border-bottom-right-radius: 8px; }
+
+/* ==========================
+   Checkbox
+========================== */
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9em;
+  position: relative;
+  user-select: none;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox .checkmark {
+  width: 16px;
+  height: 16px;
+  background-color: var(--light_color);
+  border: 2px solid var(--background);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.checkbox input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--background);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox:hover .checkmark {
+  background-color: var(--light_color);
+}
+
+/* ==========================
+   Poster Grid
+========================== */
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.poster-box {
+  padding: 16px;
+  border-radius: 8px;
+  background: var(--light_color);
+}
+
+.poster-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poster-name {
+  font-weight: bold;
+}
+
+.poster-time {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.poster-description {
+  margin-top: 12px;
+}
+
+/* ==========================
+   Misc
+========================== */
+.chosen-thing {
+  align-items: center;
+  text-align: left;
+  max-width: fit-content;
 }

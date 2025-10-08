@@ -17,16 +17,22 @@
     <p>{{ .time }}</p>
     <p>{{ .location }}</p>
   </div>
-  <div class="speaker-content ">
-      <h3>{{ .title }}</h3>
-      <p>{{ .description }}</p>
-      <div style="display: flex; justify-content: center; align-items: center;">
-      <div class="speaker-details chosen-thing">
-        <p><strong>{{ .activity }}</strong></p>
-        <p>{{ .group }}</p>
-      </div>
-      </div>
+  <div class="speaker-content">
+  <h3>{{ .title }}</h3>
+  <p style="padding-bottom: 10px;">{{ .description }}</p>
+  <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--edge); padding-top: 5px;">
+    <div class="speaker-details chosen-thing">
+      <p><strong>{{ .activity }}</strong></p>
+      <p>{{ .group }}</p>
     </div>
+    <div>
+      {{ $slides := .slides }}
+      {{ if ne $slides ""}}
+        <a class="slides" style="text-decoration: none;" href={{ $slides }}>Slides</a>
+      {{ end }}
+    </div>
+  </div>
+</div>
   </div>
       {{ end }}
     {{ end }}

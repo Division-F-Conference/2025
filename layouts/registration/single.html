@@ -7,10 +7,40 @@
     <link rel="stylesheet" href="../css/single.css">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <style>
+    .form-wrapper {
+    position: relative;
+  }
+
+  .form-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 8px;
+    z-index: 2;
+  }
+
+  .contact-form {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(100%);
+  }
+    </style>
+    
 </head>
 <body>
   {{ partial "header.html" . }}
 <main>
+    <div class="form-wrapper">
+    <div class="form-overlay">Registration is now closed.</div>
+
   <form method="POST" class="contact-form" action="https://script.google.com/macros/s/AKfycbxp55RTvt9dl8AMZjukAR-68BSjD-XHKV_BjOrTokguuQBu-kttMVSWnxnZUnVKLZ7f/exec">
     <label for="name">Name</label>
     <input type="text" id="name" name="Name" required placeholder="Full name">
@@ -50,6 +80,7 @@
 
     <button type="submit" style="margin-top: 20px;">Register</button>
   </form>
+    </div>
   <script>
   const presenterCheckbox = document.getElementById('presenter');
   const posterField = document.getElementById('poster-field');
