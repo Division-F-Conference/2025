@@ -56,7 +56,7 @@ timetable:
     location: "LT1"
     title: "FEAT: Free energy Estimators with Adaptive Transport"
     description: "We present Free energy Estimators with Adaptive Transport (FEAT), a novel framework for free energy estimation -- a critical challenge across scientific domains. FEAT leverages learned transports implemented via stochastic interpolants and provides consistent, minimum-variance estimators based on escorted Jarzynski equality and controlled Crooks theorem, alongside variational upper and lower bounds on free energy differences. Unifying equilibrium and non-equilibrium methods under a single theoretical framework, FEAT establishes a principled foundation for neural free energy calculations. Experimental validation on toy examples, molecular simulations, and quantum field theory demonstrates improvements over existing learning-based methods."
-    slides: ""
+    slides: "../slides/lobato.pdf"
   - time: "15:00 - 15:25"
     activity: "Dr. Meng Chen"
     group: "Control"
