@@ -49,7 +49,7 @@ timetable:
     location: "LT1"
     title: "Virtual Model Control for Robot Manipulation"
     description: "Robotic manipulation today often succeeds only when relying on accurate models or large datasets and heavy learning pipelines. However, are these approaches scalable? Can we achieve effective manipulation with partial information, limited data, and guaranteed safety and stability? In this talk, we present Virtual Model Control (VMC) as a practical and effective alternative. By embedding task-specific virtual components—such as mass, springs and dampers—VMC enables robots to exhibit adaptive and robust behaviors without explicit trajectory planning. We demonstrate its capability across a range of tasks, from simple reaching motions to contact-rich operations such as rock chopping, showing compliance and resilience under uncertainty. Finally, we explore new extensions including data-driven virtual components for enhanced performance and event-based variable stiffness mechanisms."
-    slides: ""
+    slides: "../slides/zhang.pdf"
   - time: "14:30 - 14:55"
     activity: "Prof. José Miguel Hernández-Lobato"
     group: "CBL"
