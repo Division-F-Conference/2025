@@ -13,26 +13,31 @@
       {{ $group := .group }}
       {{ if ne $group "" }}
         <div class="speaker-card">
-  <div class="speaker-time-location">
-    <p>{{ .time }}</p>
-    <p>{{ .location }}</p>
-  </div>
   <div class="speaker-content">
-  <h3>{{ .title }}</h3>
-  <p style="padding-bottom: 10px;">{{ .description }}</p>
-  <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--edge); padding-top: 5px;">
-    <div class="speaker-details chosen-thing">
-      <p><strong>{{ .activity }}</strong></p>
-      <p>{{ .group }}</p>
+    <div class="double_cell" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem">
+      <h3>{{ .title }}</h3>
+      <div style="text-align: right; font-size: 16px;">
+        <p style="margin-bottom: -10px;">Time: {{ .time }}</p>
+        <p>Location: {{ .location }}</p>
+      </div>
     </div>
     <div>
-      {{ $slides := .slides }}
-      {{ if ne $slides ""}}
-        <a class="slides" style="text-decoration: none;" href={{ $slides }}>Slides</a>
-      {{ end }}
+      <p style="padding-bottom: 10px; text-align: justify;">{{ .description }}</p>
     </div>
+    <div class="double_cell" style="margin-bottom: -20px; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--edge)">
+      <div>
+        <p style="margin-bottom: -10px"><strong>{{ .activity }}</strong></p>
+        <p>{{ .group }}</p>
+      </div>
+      <div style="text-align: right; padding-top: 20px">
+        {{ $slides := .slides }}
+        {{ if ne $slides ""}}
+          <a class="slides" style="text-decoration: none;" href={{ $slides }}>Slides</a>
+        {{ end }}
+      </div>
+    </div>
+
   </div>
-</div>
   </div>
       {{ end }}
     {{ end }}
