@@ -9,8 +9,9 @@ members:
     group: "MIL"
   - name: "Felix O'Mahony"
     group: "MIL"
-  - name: "Joe Bacchus George"
+  - name: "Joe Bacchus George" 
     group: "PSI²"
+    chair: true
 ---
 
 The conference will be held in person at the *Cambridge Engineering Department, on Trumpington Street Site, CB2 1PZ* on **Tuesday 7ᵗʰ October** from **10:30 to 17:00**.

@@ -2,22 +2,22 @@
    Root Variables
 ========================== */
 :root {
-  --neon: #e4a781;
-  --main: #fffefd;
-  --alt_main: #efded4;
-  --background: #131313;
-  --light_color: #ffffff;
-  --dark_color: #131313;
---grey_color: #faece6;
+    --neon: #fea97f;
+    --main: #fffefd;
+    --alt_main: #efded4;
+    --background: #131313;
+    --light_color: #ffffff;
+    --dark_color: #131313;
+    --grey_color: #faece6;
     --edge: #f3f0ee;
-    --card:#f7f6f4;
+    --card: #f7f6f4;
 
 }
 
 @font-face {
   font-family: 'Plus Jakarta Sans';
   src: url('../fonts/PlusJakartaSans-VariableFont_wght.tff') format('truetype-variations');
-  font-weight: 200 800; 
+  font-weight: 200 800;
   font-style: normal;
   font-display: swap;
 }
@@ -41,7 +41,12 @@ p {
   font-size: 1.2em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--dark_color);
   margin-top: 1em;
   margin-bottom: 0.5em;
@@ -55,46 +60,46 @@ h1 {
    Header & Navigation
 ========================== */
 header {
-    z-index: 100; 
-    background-color: transparent;
-    color: var(--dark_color);
-    padding: 1em 0;
-    border-bottom: 1px solid var(--edge); 
-    padding-bottom: 16px;
-    margin-bottom: 20px; 
+  z-index: 100;
+  background-color: transparent;
+  color: var(--dark_color);
+  padding: 1em 0;
+  border-bottom: 1px solid var(--edge);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 header nav {
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5em;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5em;
 }
 
 header nav a.site-title {
-    color: var(--color);
-    text-decoration: none;
-    font-size: 1.4em;
-    font-weight: 1000;
+  color: var(--dark-color);
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: 1000;
 }
 
 header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2em;
 }
 
 header nav ul li a {
-    color: var(--dark_color);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5em 0;
-    transition: color 0.1s ease;
+  color: var(--dark_color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5em 0;
+  transition: color 0.1s ease;
 }
 
 /* header nav ul li a:hover {
@@ -122,7 +127,7 @@ header nav ul li a {
 }
 
 .menu-toggle {
-  color: var(--light_color);
+  color: var(--dark_color);
   display: none;
   font-size: 1.5rem;
   background: none;
@@ -131,47 +136,48 @@ header nav ul li a {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 1.2rem;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    border: 2px solid var(--dark_color);
-    background-color: var(--main);
-    border-radius: 10px;
-    padding: 1rem;
-    color: var(--dark_color);
-  }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1.2rem;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border: 1px solid var(--edge);
+        background-color: var(--main);
+        border-radius: 2px;
+        padding: 1rem;
+        color: var(--dark_color);
 
-  .nav-links.show {
-    display: flex;
-  }
+    }
 
-  .menu-toggle {
-    display: block;
-  }
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
 }
 
 /* ==========================
    Buttons
 ========================== */
 #Registration {
-    border-radius: 4px;
-    padding: 4px 8px;
-    background-color: var(--grey_color);
-    font-weight: 600;
-    color: var(--neon);
+  border-radius: 4px;
+  padding: 4px 8px;
+  background-color: var(--grey_color);
+  font-weight: 600;
+  color: var(--neon);
 }
 
 .slides {
-    border-radius: 4px;
-    padding: 4px 8px;
-    background-color: var(--grey_color);
-    font-weight: 600;
-    color: var(--neon);
+  border-radius: 4px;
+  padding: 4px 8px;
+  background-color: var(--grey_color);
+  font-weight: 600;
+  color: var(--neon);
 }
 
 /* #Registration:hover {
@@ -194,11 +200,11 @@ main {
    Footer
 ========================== */
 footer {
-    text-align: center;
-    padding: 0.5em 0;
-    background-color: var(--dark_color);
-    color: var(--light_color);
-    flex-shrink: 0; 
+  text-align: center;
+  padding: 0.5em 0;
+  background-color: var(--dark_color);
+  color: var(--light_color);
+  flex-shrink: 0;
 }
 
 /* ==========================
@@ -228,7 +234,7 @@ footer {
 }
 
 .speaker-content h3 {
-    max-width: 400px;
+  max-width: 400px;
   font-size: 1.4rem;
   line-height: 1.2em;
   padding-bottom: 10px;
@@ -237,15 +243,15 @@ footer {
 }
 
 .speaker-content p {
-  margin: 0.8rem 0; 
+  margin: 0.8rem 0;
   line-height: 1.2;
   color: #555;
-  font-size: 0.95rem; 
+  font-size: 0.95rem;
 }
 
 
 .speaker-time-location {
-    padding: 0px;
+  padding: 0px;
   grid-area: time;
   justify-self: end;
   text-align: right;
@@ -384,10 +390,21 @@ footer {
   border-bottom: 1px solid var(--edge);
 }
 
-.timetable tr:first-child th:first-child { border-top-left-radius: 8px; }
-.timetable tr:first-child th:last-child { border-top-right-radius: 8px; }
-.timetable tr:last-child td:first-child { border-bottom-left-radius: 8px; }
-.timetable tr:last-child td:last-child { border-bottom-right-radius: 8px; }
+.timetable tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.timetable tr:first-child th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.timetable tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.timetable tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
 
 /* ==========================
    Checkbox
@@ -421,7 +438,7 @@ footer {
   position: relative;
 }
 
-.checkbox input:checked + .checkmark::after {
+.checkbox input:checked+.checkmark::after {
   content: "";
   position: absolute;
   left: 4px;
