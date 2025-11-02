@@ -1,99 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Site.Title }}</title>
-    <link rel="stylesheet" href="../css/single.css">
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Site.Title }}</title>
+  <link rel="stylesheet" href="../css/single.css">
+  <meta name="description"
+    content="Division F Conference 2025, an exhibition of current research in Information Engineering at Cambridge. Topics range from robotics and theoretical neuroscience to probabilistic machine learning and information theory.">
+  <meta name="keywords"
+    content="University of Cambridge, Division F Conference, Information Engineering, Control, Machine Intelligence, Computational and Biological Learning, Probabilistic Systems, Information and Inference">
+  <meta name="author" content="Joe Bacchus George">
+
+  <meta name="msapplication-TileColor" content="#fea97f">
+  <meta name="theme-color" content="#fea97f">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileImage" content="images/ms-icon-150x150.png">
+  <style>
     .form-wrapper {
-    position: relative;
-  }
+      position: relative;
+    }
 
-  .form-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(246, 243, 243, 0.768);
-    color: rgb(15, 15, 15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6em;
-    font-weight: 700;
-    text-align: center;
-    border-radius: 8px;
-    z-index: 2;
-  }
+    .form-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(246, 243, 243, 0.768);
+      color: rgb(15, 15, 15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6em;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 8px;
+      z-index: 2;
+    }
 
-  .contact-form {
-    opacity: 0.4;
-    pointer-events: none;
-    filter: grayscale(100%);
-  }
-    </style>
-    
+    .contact-form {
+      opacity: 0.4;
+      pointer-events: none;
+      filter: grayscale(100%);
+    }
+  </style>
+
 </head>
+
 <body>
   {{ partial "header.html" . }}
-<main>
+  <main>
     <div class="form-wrapper">
-    <div class="form-overlay">Registration is now closed.</div>
+      <div class="form-overlay">Registration is now closed.</div>
 
-  <form method="POST" class="contact-form" action="https://script.google.com/macros/s/AKfycbxp55RTvt9dl8AMZjukAR-68BSjD-XHKV_BjOrTokguuQBu-kttMVSWnxnZUnVKLZ7f/exec">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="Name" required placeholder="Full name">
+      <form method="POST" class="contact-form"
+        action="https://script.google.com/macros/s/AKfycbxp55RTvt9dl8AMZjukAR-68BSjD-XHKV_BjOrTokguuQBu-kttMVSWnxnZUnVKLZ7f/exec">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required placeholder="Full name">
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="Email" required placeholder="crsid@cam.ac.uk">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required placeholder="crsid@cam.ac.uk">
 
-    <label for="role">Group</label>
-    <select id="role" name="Group" required>
-      <option value="" disabled selected>Academic Group</option>
-      <option value="control">Control</option>
-      <option value="cbl">Computational and Biological Learning (CBL)</option>
-      <option value="mil">Machine Intelligence (MIL)</option>
-      <option value="psi2">Probabilistic Systems, Information and Inference (PSI²)</option>
-      <option value="other">External</option>
-    </select>
+        <label for="role">Group</label>
+        <select id="role" name="Group" required>
+          <option value="" disabled selected>Academic Group</option>
+          <option value="control">Control</option>
+          <option value="cbl">Computational and Biological Learning (CBL)</option>
+          <option value="mil">Machine Intelligence (MIL)</option>
+          <option value="psi2">Probabilistic Systems, Information and Inference (PSI²)</option>
+          <option value="other">External</option>
+        </select>
 
-    <label for="message">Dietary requirements</label>
-    <textarea id="message" name="Diet" required placeholder="Your message"></textarea>
+        <label for="message">Dietary requirements</label>
+        <textarea id="message" name="Diet" required placeholder="Your message"></textarea>
 
-    <label class="checkbox">
-      <input type="checkbox" id="presenter" name="Poster">
-      <span class="checkmark"></span>
-        I will be presenting a poster
-    </label>
+        <label class="checkbox">
+          <input type="checkbox" id="presenter" name="Poster">
+          <span class="checkmark"></span>
+          I will be presenting a poster
+        </label>
 
-    <div id="poster-field" style="display: none;">
-      <label for="poster-name">Poster title</label>
-      <textarea id="poster-name" name="Title" placeholder="Your poster title"></textarea>
+        <div id="poster-field" style="display: none;">
+          <label for="poster-name">Poster title</label>
+          <textarea id="poster-name" name="Title" placeholder="Your poster title"></textarea>
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" id="speaker" name="Talk">
+          <span class="checkmark"></span>
+          I would like to give a talk
+        </label>
+
+        <button type="submit" style="margin-top: 20px;">Register</button>
+      </form>
     </div>
+    <script>
+      const presenterCheckbox = document.getElementById('presenter');
+      const posterField = document.getElementById('poster-field');
 
-    <label class="checkbox">
-      <input type="checkbox" id="speaker" name="Talk">
-      <span class="checkmark"></span>
-        I would like to give a talk
-    </label>
-
-    <button type="submit" style="margin-top: 20px;">Register</button>
-  </form>
-    </div>
-  <script>
-  const presenterCheckbox = document.getElementById('presenter');
-  const posterField = document.getElementById('poster-field');
-
-  presenterCheckbox.addEventListener('change', () => {
-    if (presenterCheckbox.checked) {
-      posterField.style.display = 'block';
-    } else {
-      posterField.style.display = 'none';
-    }
-  });
-</script>
-</main>
+      presenterCheckbox.addEventListener('change', () => {
+        if (presenterCheckbox.checked) {
+          posterField.style.display = 'block';
+        } else {
+          posterField.style.display = 'none';
+        }
+      });
+    </script>
+  </main>
   {{ partial "footer.html" . }}
 </body>
+
 </html>

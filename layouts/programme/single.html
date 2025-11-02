@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Site.Title }}</title>
-    <link rel="stylesheet" href="../css/single.css">
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Site.Title }}</title>
+  <link rel="stylesheet" href="../css/single.css">
+  <meta name="description"
+    content="Division F Conference 2025, an exhibition of current research in Information Engineering at Cambridge. Topics range from robotics and theoretical neuroscience to probabilistic machine learning and information theory.">
+  <meta name="keywords"
+    content="University of Cambridge, Division F Conference, Information Engineering, Control, Machine Intelligence, Computational and Biological Learning, Probabilistic Systems, Information and Inference">
+  <meta name="author" content="Joe Bacchus George">
+
+  <meta name="msapplication-TileColor" content="#fea97f">
+  <meta name="theme-color" content="#fea97f">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileImage" content="images/ms-icon-150x150.png">
 </head>
+
 <body>
   {{ partial "header.html" . }}
   <main>
@@ -28,13 +43,13 @@
             {{ $group := .group }}
             {{ if eq $group ""}}
             <div class="special-activity">
-            <em>{{ .activity }}</em>
-            <div style="font-size: 12px">{{ .group }}</div>
+              <em>{{ .activity }}</em>
+              <div style="font-size: 12px">{{ .group }}</div>
             </div>
             {{ else }}
             <div>
-            <strong>{{ .activity }}</strong>
-            <div style="font-size: 12px">{{ .group }}</div>
+              <strong>{{ .activity }}</strong>
+              <div style="font-size: 12px">{{ .group }}</div>
             </div>
             {{ end }}
           </td>
@@ -46,4 +61,5 @@
   </main>
   {{ partial "footer.html" . }}
 </body>
+
 </html>
